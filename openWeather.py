@@ -17,13 +17,15 @@ app = Flask(__name__)
 def weather():
 
     cityReq = request.args.get('city', None)
+
+    print(cityReq)
     city = cityReq.replace('"','')
     city = cityReq.replace("'","")
 
     myKey = '987b414a9513ac4a73b170702852a0e6'   
     host = 'http://api.openweathermap.org/data/2.5/forecast'
  
-    params={'q': city,'APPID': myKey}   
+    params={'q': city,'APPID': myKey} 
 
     r = requests.get(host,params)  
     reqJson = r.json()
@@ -33,9 +35,9 @@ def weather():
 
     #Grava dados de hitorico
     historyController.saveHitory(reqJson)
-
+    
     return jsonify(context=reqJson)
     
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 6000))
-    app.run(host='0.0.0.0', port=port)
+    app.run(host='0.0.0.0', port=port, debug=True)

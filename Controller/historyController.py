@@ -8,6 +8,8 @@ def saveHitory(reqJson):
     
     idCity = citydb.save(nameCity)
 
+    print(idCity)
+
     historyList = reqJson.get('list')
     
     date_query = date.today()

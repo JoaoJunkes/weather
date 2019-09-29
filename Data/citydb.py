@@ -14,9 +14,9 @@ def save(name):
         sql = 'insert into city (name) values (%s)'
         cur.execute(sql, [name])
         con.commit()
-    else:
-        cur.execute('select id from city order by id desc')
-        idCity = cur.fetchone()
+    
+    cur.execute('select id from city order by id desc')
+    idCity = cur.fetchone()
     
     return idCity
 
