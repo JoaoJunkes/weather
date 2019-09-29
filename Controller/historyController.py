@@ -8,8 +8,6 @@ def saveHitory(reqJson):
     
     idCity = citydb.save(nameCity)
 
-    print(idCity)
-
     historyList = reqJson.get('list')
     
     date_query = date.today()
@@ -25,6 +23,9 @@ def saveHitory(reqJson):
         
         
         historydb.save(temp_max,temp_min,date_forecast,date_query,weather,id_city)
+        
+def returnHistory(nameCity):
+    return historydb.select(nameCity)        
 
 
         

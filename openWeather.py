@@ -37,6 +37,20 @@ def weather():
     historyController.saveHitory(reqJson)
     
     return jsonify(context=reqJson)
+
+@app.route("/history", methods=['GET'])
+def history():
+
+    cityReq = request.args.get('city', None)
+    
+    print(cityReq)
+    cityReq = cityReq.replace('"','')
+    cityReq = cityReq.replace("'","")    
+
+    history = historyController.returnHistory(cityReq)
+    
+    return jsonify(context=history)
+
     
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 6000))

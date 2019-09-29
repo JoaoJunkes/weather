@@ -6,7 +6,8 @@ Created on Sat Sep 28 01:58:34 2019
 """
 
 class History(object):
-    def __init__(self, temp_max,temp_min,date_forecast,date_query,weather,id,id_city):
+    
+    def __init__(self, temp_max,temp_min,date_forecast,date_query,weather,id_city):
         self.temp_max = temp_max
         self.temp_min = temp_min
         self.date_forecast = date_forecast
@@ -48,4 +49,4 @@ class History(object):
         self.weather = weather
 
     def setId_city(self, id_city):
-        self.id_city = id_city
+        self.id_city = id_city     
