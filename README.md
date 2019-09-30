@@ -12,6 +12,8 @@ Historicos de consulta por cidade:
 Endpoint GET
 localhost:6000/history?city='Blumenau'
 
+Caso utilizado a ferramenta Postman, basta impotar o arquivo "OpenWeather.postman_collection.json" para realizar as consultas
+
 #Dependencias instalação#
 
 Python 3.7.3,
