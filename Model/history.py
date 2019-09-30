@@ -5,6 +5,7 @@ Created on Sat Sep 28 01:58:34 2019
 @author: joaoi
 """
 
+#Classe dos historicos de consulta da API
 class History(object):
     
     def __init__(self, temp_max,temp_min,date_forecast,date_query,weather,id_city):

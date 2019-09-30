@@ -13,15 +13,15 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
+#Rota para chamada da API OpenWeather
 @app.route("/weather", methods=['GET'])
 def weather():
 
     cityReq = request.args.get('city', None)
-
-    print(cityReq)
     city = cityReq.replace('"','')
     city = cityReq.replace("'","")
 
+    #key OpenWeather (Alterar conforme cadastro)
     myKey = '987b414a9513ac4a73b170702852a0e6'   
     host = 'http://api.openweathermap.org/data/2.5/forecast'
  
@@ -38,19 +38,17 @@ def weather():
     
     return jsonify(context=reqJson)
 
+#Rota para busca das gravocoes de historicos de consulta
 @app.route("/history", methods=['GET'])
 def history():
 
     cityReq = request.args.get('city', None)
-    
-    print(cityReq)
     cityReq = cityReq.replace('"','')
     cityReq = cityReq.replace("'","")    
 
     history = historyController.returnHistory(cityReq)
     
     return jsonify(context=history)
-
     
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 6000))

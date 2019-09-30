@@ -10,6 +10,7 @@ def save(name):
     
     idCity = cur.fetchone()
     
+    #Gravar cidade caso nao exista no banco
     if type(idCity) != tuple:
         sql = 'insert into city (name) values (%s)'
         cur.execute(sql, [name])
