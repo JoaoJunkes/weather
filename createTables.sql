@@ -3,6 +3,7 @@ CREATE TABLE public.city (
 	id serial NOT NULL,
 	CONSTRAINT city_pk PRIMARY KEY (id)
 );
+
 CREATE TABLE public.history_weather (
 	temp_max float4 NULL,
 	temp_min float4 NULL,
