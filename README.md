@@ -14,10 +14,10 @@ localhost:6000/history?city='Blumenau'
 
 #Dependencias instalação#
 
-Python 3.7.3
-PostgreSQL 11.5
-DBeaver 6.2.1 (Opcional)
-Anaconda Navigator 1.9.7 (Opcional)
+Python 3.7.3,
+PostgreSQL 11.5,
+DBeaver 6.2.1 (Opcional),
+Anaconda Navigator 1.9.7 (Opcional),
 Postman (Opcional)
 
 #Dependencias Python#
