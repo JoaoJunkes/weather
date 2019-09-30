@@ -31,6 +31,8 @@ psycopg2
 
 -Instalar as dependencias
 - (DBeaver) Criar banco de dados PostgreSQL e executar script "createTables.SQL" para criação das tabelas necessarias e seus relacionamentos
+- Alterar variaveis de conexão no arquivo "connectdb.py conforme a configuração do banco
+- Alterar variavel myKey do arquivo "openWeather.py" conforme key do cadastro do OpenWeather (Opcional)
 - (Anaconda) Criar e iniciar ambiente virtual python
 - No ambiente virtual, acessar a pasta principal da aplicação e executar o comando "python openWeather.py"
 - (Postman) Realizar pesquisas por nome de cidades pelo método GET na rota localhost:6000/weather?city='Blumenau'
